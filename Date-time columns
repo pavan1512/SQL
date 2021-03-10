@@ -1,0 +1,19 @@
+1) Convert 'string' type 'date' column to 'date-time' format.
+
+syntax:
+column_name::timestamp
+
+2) when we perform arithmetic on date columns, result is of INTERVAL datatype
+
+example: 
+(2020-10-22 00:00:00) - (2020-10-10 00:00:00) = 12 days (instead of '12')
+
+3) We can set the interval as per the requirement
+
+example: 
+we want to have the difference of two columns less than 10 days
+
+syntax: (Assuming both columns are of date types, if not convert them)
+column1 <= column2 + INTERVAL '10 days' as diff_col
+
+
