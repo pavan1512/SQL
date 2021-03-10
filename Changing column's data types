@@ -1,0 +1,13 @@
+we can convert column data type in two ways
+1. CAST(column_name AS integer)
+2. column_name::integer
+
+syntax:
+
+select CAST(column_name AS integer) as column_name_int
+from temp_table
+
+or 
+
+select column_name::integer as column_name_int
+from temp_table
